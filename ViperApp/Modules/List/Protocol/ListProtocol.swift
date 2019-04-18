@@ -7,17 +7,33 @@
 //
 
 import Foundation
+import UIKit
 
-protocol ViewToPresenterProtocol {
+protocol ViewToPresenterProtocol: class {
     
     func viewDidLoad()
     func showDetail(for item: Codable)
 }
 
-protocol PresenterToViewProtocol {
+protocol PresenterToViewProtocol: class {
     
     func showLoading()
     func hideLoading()
     func showError(with message: String?)
     func showItems(with items: [Codable])
+}
+
+protocol PresenterToRouterProtocol: class {
+    
+    static func createListModule() -> UIViewController
+    func pushDetail(with item: Codable)
+}
+
+protocol PresenterToInteractorProtocol: class {
+    func retrieveList()
+}
+
+protocol InteractorToPresenterProtocol: class {
+    func retrieveSuccess(items: [Codable])
+    func retrieveFail(message: String?)
 }
