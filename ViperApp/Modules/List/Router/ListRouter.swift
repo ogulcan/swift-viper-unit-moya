@@ -6,4 +6,15 @@
 //  Copyright © 2019 Ogulcan. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ListRouter: PresenterToRouterProtocol {
+
+    static func createListModule() -> UIViewController {
+        return UIViewController()
+    }
+    
+    func pushDetail(with item: Codable) {
+        
+    }
+}

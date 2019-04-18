@@ -11,6 +11,10 @@ import UIKit
 
 protocol ViewToPresenterProtocol: class {
     
+    var view: PresenterToViewProtocol? { get set }
+    var router: PresenterToRouterProtocol? { get set }
+    var interactor: PresenterToInteractorProtocol? { get set }
+    
     func viewDidLoad()
     func showDetail(for item: Codable)
 }
