@@ -22,24 +22,36 @@ enum TMDbApi {
 extension TMDbApi: TargetType {
     
     var baseURL: URL {
-        return URL(string: Constant.API_BASE_URL)!
+        return Constant.API_BASE_URL.url
     }
     
     var path: String {
         switch self {
         case .listActors():
-            return ""
+            return "person/popular"
         case .searchActors(_):
-            return ""
+            return "search/person"
         }
     }
     
     var method: Moya.Method {
-        return .post
+        return .get
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+            case .listActors():
+                return .requestParameters(parameters: ["api_key": Constant.API_PRIVATE_KEY,
+                                                       "language": Constant.API_LANGUAGE,
+                                                       "page": 1],
+                                          encoding: URLEncoding.queryString)
+            case .searchActors(let p):
+                return .requestParameters(parameters: ["api_key": Constant.API_PRIVATE_KEY,
+                                                       "language": Constant.API_LANGUAGE,
+                                                       "query": p,
+                                                       "page": 1],
+                                          encoding: URLEncoding.queryString)
+        }
     }
     
     var headers: [String : String]? {
@@ -47,6 +59,11 @@ extension TMDbApi: TargetType {
     }
     
     var sampleData: Data {
-        return Data(base64Encoded: "Sample")!
+        switch self {
+        case .listActors():
+            return "{ \"page\": 1, \"total_results\": 1074, \"total_pages\": 54, \"results\": [] }".utf8Encoded
+        case .searchActors(_):
+            return "{ \"page\": 1, \"total_results\": 17826, \"total_pages\": 892, \"results\": [] }".utf8Encoded
+        }
     }
 }
