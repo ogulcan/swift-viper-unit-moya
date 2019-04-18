@@ -35,6 +35,7 @@ protocol PresenterToRouterProtocol: class {
 
 protocol PresenterToInteractorProtocol: class {
     
+    var presenter: InteractorToPresenterProtocol? { get set }
     func retrieveList()
 }
 

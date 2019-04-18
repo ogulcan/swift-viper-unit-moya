@@ -16,7 +16,8 @@ class ListPresenter: ViewToPresenterProtocol {
     var interactor: PresenterToInteractorProtocol?
     
     func viewDidLoad() {
-        
+        view?.showLoading()
+        interactor?.retrieveList()
     }
     
     func showDetail(for item: Codable) {
@@ -27,10 +28,12 @@ class ListPresenter: ViewToPresenterProtocol {
 extension ListPresenter: InteractorToPresenterProtocol {
     
     func retrieveSuccess(items: [Codable]) {
-        
+        view?.hideLoading()
+        view?.showItems(with: items)
     }
     
     func retrieveFail(message: String?) {
-        
+        view?.hideLoading()
+        view?.showError(with: message)
     }
 }
