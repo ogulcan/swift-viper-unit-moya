@@ -10,8 +10,8 @@ import UIKit
 
 class ListRouter: PresenterToRouterProtocol {
 
-    static func createListModule() -> UIViewController {
-        return UIViewController()
+    static func createListModule() -> UINavigationController {
+        return ListViewController.instantiateWithNavigation(from: .Main)
     }
     
     func pushDetail(with item: Codable) {
