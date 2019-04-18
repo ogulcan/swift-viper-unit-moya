@@ -29,7 +29,7 @@ protocol PresenterToViewProtocol: class {
 
 protocol PresenterToRouterProtocol: class {
     
-    static func createListModule() -> UIViewController
+    static func createListModule() -> UINavigationController
     func pushDetail(with item: Codable)
 }
 
