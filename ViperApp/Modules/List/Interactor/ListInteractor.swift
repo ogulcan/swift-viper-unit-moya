@@ -16,4 +16,4 @@ class ListInteractor: PresenterToInteractorProtocol {
     func retrieveList() {
         
     }
-}g'
+}
