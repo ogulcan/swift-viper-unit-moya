@@ -77,12 +77,10 @@
 		78FC7ABA2267D61100BEEBD5 /* ViperApp */ = {
 			isa = PBXGroup;
 			children = (
-				78FC7ABB2267D61100BEEBD5 /* AppDelegate.swift */,
-				78FC7ABD2267D61100BEEBD5 /* ViewController.swift */,
-				78FC7ABF2267D61100BEEBD5 /* Main.storyboard */,
-				78FC7AC22267D61500BEEBD5 /* Assets.xcassets */,
-				78FC7AC42267D61500BEEBD5 /* LaunchScreen.storyboard */,
-				78FC7AC72267D61500BEEBD5 /* Info.plist */,
+				78FC7ADB22687BFB00BEEBD5 /* Application */,
+				78FC7ADC22687C0000BEEBD5 /* Modules */,
+				78FC7ADD22687C0F00BEEBD5 /* Entities */,
+				78FC7ADE22687C1E00BEEBD5 /* Common */,
 			);
 			path = ViperApp;
 			sourceTree = "<group>";
@@ -94,6 +92,56 @@
 				78FC7AD22267D61600BEEBD5 /* Info.plist */,
 			);
 			path = ViperAppTests;
+			sourceTree = "<group>";
+		};
+		78FC7ADB22687BFB00BEEBD5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				78FC7ABB2267D61100BEEBD5 /* AppDelegate.swift */,
+				78FC7ABD2267D61100BEEBD5 /* ViewController.swift */,
+				78FC7ABF2267D61100BEEBD5 /* Main.storyboard */,
+				78FC7AC22267D61500BEEBD5 /* Assets.xcassets */,
+				78FC7AC42267D61500BEEBD5 /* LaunchScreen.storyboard */,
+				78FC7AC72267D61500BEEBD5 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		78FC7ADC22687C0000BEEBD5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				78FC7ADF22687D2B00BEEBD5 /* List */,
+				78FC7AE022687D3100BEEBD5 /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		78FC7ADD22687C0F00BEEBD5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		78FC7ADE22687C1E00BEEBD5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		78FC7ADF22687D2B00BEEBD5 /* List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		78FC7AE022687D3100BEEBD5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Y7GY83577;
-				INFOPLIST_FILE = ViperApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ViperApp/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,7 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Y7GY83577;
-				INFOPLIST_FILE = ViperApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ViperApp/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
