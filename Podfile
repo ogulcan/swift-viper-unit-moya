@@ -4,7 +4,8 @@ target 'ViperApp' do
   use_frameworks!
 
   # Network
-  pod 'Moya', '13.0.0'
+  pod 'Moya', '12.0.1'
+  pod 'Alamofire',  '~> 4.5'
   
   target 'ViperAppTests' do
     inherit! :search_paths
