@@ -22,6 +22,8 @@
 		78FC7AF42268B67F00BEEBD5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7AF32268B67F00BEEBD5 /* ListViewController.swift */; };
 		78FC7AF62268C45D00BEEBD5 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7AF52268C45D00BEEBD5 /* ListPresenter.swift */; };
 		78FC7AF82269017C00BEEBD5 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7AF72269017C00BEEBD5 /* ListInteractor.swift */; };
+		78FC7AFC2269149600BEEBD5 /* TMDbApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7AFB2269149600BEEBD5 /* TMDbApi.swift */; };
+		78FC7AFF226914B400BEEBD5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7AFE226914B400BEEBD5 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		78FC7AF32268B67F00BEEBD5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		78FC7AF52268C45D00BEEBD5 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		78FC7AF72269017C00BEEBD5 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		78FC7AFB2269149600BEEBD5 /* TMDbApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDbApi.swift; sourceTree = "<group>"; };
+		78FC7AFE226914B400BEEBD5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		861EB82BF6F486B1C2DF477B /* Pods-ViperAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ViperAppTests/Pods-ViperAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95F29263B7A69753B280CB7E /* Pods_ViperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B884487BD5A1DE5084A0DB /* Pods-ViperAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperAppTests.release.xcconfig"; path = "Target Support Files/Pods-ViperAppTests/Pods-ViperAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,8 +165,10 @@
 		78FC7ADE22687C1E00BEEBD5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				78FC7AEB2268B20700BEEBD5 /* UI */,
+				78FC7AFA2269148300BEEBD5 /* Api */,
 				78FC7AEA2268B1C500BEEBD5 /* Extension */,
+				78FC7AFD226914A900BEEBD5 /* Run */,
+				78FC7AEB2268B20700BEEBD5 /* UI */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -242,6 +248,22 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		78FC7AFA2269148300BEEBD5 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				78FC7AFB2269149600BEEBD5 /* TMDbApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		78FC7AFD226914A900BEEBD5 /* Run */ = {
+			isa = PBXGroup;
+			children = (
+				78FC7AFE226914B400BEEBD5 /* Constant.swift */,
+			);
+			path = Run;
+			sourceTree = "<group>";
+		};
 		851DCDFEEBA75026B24AD4F8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +272,6 @@
 				861EB82BF6F486B1C2DF477B /* Pods-ViperAppTests.debug.xcconfig */,
 				A6B884487BD5A1DE5084A0DB /* Pods-ViperAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -265,7 +286,6 @@
 				78FC7AB42267D61100BEEBD5 /* Sources */,
 				78FC7AB52267D61100BEEBD5 /* Frameworks */,
 				78FC7AB62267D61100BEEBD5 /* Resources */,
-				AED89B474DC3C8239B531B08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -376,32 +396,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AED89B474DC3C8239B531B08 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ViperApp/Pods-ViperApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ViperApp/Pods-ViperApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F0C97B511426D3AD9D044BC4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,10 +428,12 @@
 				78FC7AED2268B21000BEEBD5 /* AppStoryboard.swift in Sources */,
 				78FC7AE62268A0E000BEEBD5 /* ListRouter.swift in Sources */,
 				78FC7AF62268C45D00BEEBD5 /* ListPresenter.swift in Sources */,
+				78FC7AFC2269149600BEEBD5 /* TMDbApi.swift in Sources */,
 				78FC7AF82269017C00BEEBD5 /* ListInteractor.swift in Sources */,
 				78FC7AEF2268B2A000BEEBD5 /* UIViewController.swift in Sources */,
 				78FC7AE322689E2900BEEBD5 /* ListProtocol.swift in Sources */,
 				78FC7ABE2267D61100BEEBD5 /* ViewController.swift in Sources */,
+				78FC7AFF226914B400BEEBD5 /* Constant.swift in Sources */,
 				78FC7ABC2267D61100BEEBD5 /* AppDelegate.swift in Sources */,
 				78FC7AF42268B67F00BEEBD5 /* ListViewController.swift in Sources */,
 			);
