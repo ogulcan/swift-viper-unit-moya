@@ -34,10 +34,12 @@ protocol PresenterToRouterProtocol: class {
 }
 
 protocol PresenterToInteractorProtocol: class {
+    
     func retrieveList()
 }
 
 protocol InteractorToPresenterProtocol: class {
+    
     func retrieveSuccess(items: [Codable])
     func retrieveFail(message: String?)
 }
