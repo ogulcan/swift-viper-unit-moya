@@ -14,6 +14,14 @@ class ListInteractor: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
     
     func retrieveList() {
-        
+        BaseService<TMDbApi, [Actor]>().call(.listActors(), completion: { actors in
+            guard let actors = actors else {
+                self.presenter?.retrieveFail(message: "")
+                return
+            }
+
+            print("Actors size: \(actors.count)")
+            //self.presenter?.retrieveSuccess(items: actors)
+        })
     }
 }
