@@ -19,3 +19,21 @@ class ListViewController: UIViewController {
         self.presenter?.viewDidLoad()
     }
 }
+
+extension ListViewController: PresenterToViewProtocol {
+    func showLoading() {
+        
+    }
+    
+    func hideLoading() {
+        
+    }
+    
+    func showError(with message: String?) {
+        
+    }
+    
+    func showItems(with items: [Codable]) {
+        
+    }
+}
