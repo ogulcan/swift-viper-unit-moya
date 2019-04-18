@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+protocol ViewToPresenterProtocol {
+    
+    func viewDidLoad()
+    func showDetail(for item: Codable)
+}
+
+protocol PresenterToViewProtocol {
+    
+    func showLoading()
+    func hideLoading()
+    func showError(with message: String?)
+    func showItems(with items: [Codable])
+}
