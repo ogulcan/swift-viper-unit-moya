@@ -18,7 +18,18 @@ class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addNavigationItem()
         self.presenter?.viewDidLoad()
+    }
+    
+    private func addNavigationItem() {
+        let searchBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search"), style: .plain, target: self, action: #selector(searchTapped))
+        searchBarButtonItem.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = searchBarButtonItem
+    }
+    
+    @objc func searchTapped() {
+        
     }
 }
 
