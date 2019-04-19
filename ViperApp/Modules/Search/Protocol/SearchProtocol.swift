@@ -31,7 +31,7 @@ protocol PresenterToViewSearchProtocol: class {
 
 protocol PresenterToRouterSearchProtocol: class {
     
-    static func createListModule() -> UINavigationController
+    static func createSearchModule() -> UINavigationController
     func close()
 }
 
