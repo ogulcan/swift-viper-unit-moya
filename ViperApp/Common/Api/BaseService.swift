@@ -16,6 +16,11 @@ class BaseService<T: TargetType, S: Codable> {
             switch result {
                 case let .success(moyaResponse):
                     do {
+                        #if DEBUG
+                        let responseString = try moyaResponse.mapString()
+                        print("Response: \(responseString)")
+                        #endif
+                        
                         _ = try moyaResponse.filterSuccessfulStatusCodes()
                         let baseResponse = try moyaResponse.map(BaseResponse<S>.self)
                         completion(baseResponse.results)
