@@ -16,6 +16,21 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.presenter?.viewDidLoad()
+        self.addNavigationItem()
+    }
+    
+    private func addNavigationItem() {
+        let searchBarButtonItem = UIBarButtonItem(title: "Close", style: .done, target: nil, action: #selector(closeTapped))
+        searchBarButtonItem.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = searchBarButtonItem
+    }
+    
+    @objc func closeTapped() {
+        
+    }
 }
 
 extension SearchViewController: PresenterToViewSearchProtocol {
