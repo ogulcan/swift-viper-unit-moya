@@ -11,6 +11,7 @@ import UIKit
 class ListViewController: UIViewController {
 
     var presenter: ViewToPresenterProtocol?
+    var listItems: [Actor] = []
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -34,6 +35,25 @@ extension ListViewController: PresenterToViewProtocol {
     }
     
     func showItems(with items: [Codable]) {
+        self.listItems = items as! [Actor]
+        self.tableView.reloadData()
+    }
+}
+
+
+extension ListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.listItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(at: indexPath) as ListCell
+        cell.set(for: self.listItems[indexPath.row])
         
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }

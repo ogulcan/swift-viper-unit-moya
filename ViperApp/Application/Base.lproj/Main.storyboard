@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qzx-7Z-psg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListCell" rowHeight="100" id="yjf-9G-r7G" customClass="ListCell" customModule="ViperApp" customModuleProvider="target">
@@ -73,13 +73,17 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gFm-qZ-1uX" id="gvx-2S-4du"/>
+                                    <outlet property="delegate" destination="gFm-qZ-1uX" id="mhm-qA-geb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qzx-7Z-psg" firstAttribute="bottom" secondItem="G6s-a7-RpU" secondAttribute="bottom" id="9K4-Di-BEt"/>
                             <constraint firstItem="qzx-7Z-psg" firstAttribute="leading" secondItem="G6s-a7-RpU" secondAttribute="leading" id="qez-a6-vam"/>
-                            <constraint firstItem="qzx-7Z-psg" firstAttribute="top" secondItem="Xzi-KH-TIh" secondAttribute="top" id="xhs-gG-LCT"/>
+                            <constraint firstItem="qzx-7Z-psg" firstAttribute="top" secondItem="G6s-a7-RpU" secondAttribute="top" id="xhs-gG-LCT"/>
                             <constraint firstItem="qzx-7Z-psg" firstAttribute="trailing" secondItem="G6s-a7-RpU" secondAttribute="trailing" id="xjd-u3-HdL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G6s-a7-RpU"/>

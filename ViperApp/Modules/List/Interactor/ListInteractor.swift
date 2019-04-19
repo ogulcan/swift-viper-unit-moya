@@ -19,9 +19,8 @@ class ListInteractor: PresenterToInteractorProtocol {
                 self.presenter?.retrieveFail(message: "")
                 return
             }
-
-            print("Actors size: \(actors.count)")
-            //self.presenter?.retrieveSuccess(items: actors)
+            
+            self.presenter?.retrieveSuccess(items: actors)
         })
     }
 }
