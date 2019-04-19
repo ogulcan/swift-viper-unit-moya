@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ListViewController: UIViewController {
 
@@ -23,15 +24,15 @@ class ListViewController: UIViewController {
 
 extension ListViewController: PresenterToViewProtocol {
     func showLoading() {
-        
+        SVProgressHUD.show()
     }
     
     func hideLoading() {
-        
+        SVProgressHUD.dismiss()
     }
     
     func showError(with message: String?) {
-        
+        SVProgressHUD.showError(withStatus: message ?? "An error occuredgş")
     }
     
     func showItems(with items: [Codable]) {

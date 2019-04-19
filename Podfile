@@ -8,6 +8,9 @@ target 'ViperApp' do
   pod 'Alamofire',  '~> 4.5'
   pod 'AlamofireImage', '~> 3.5'
   
+  # UI
+  pod 'SVProgressHUD'
+  
   target 'ViperAppTests' do
     inherit! :search_paths
   end
