@@ -107,6 +107,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7834D9BC2269E40900A449EC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7834D9BD2269E41500A449EC /* Protocol */,
+				7834D9BE2269E41B00A449EC /* Router */,
+				7834D9BF2269E42200A449EC /* Interactor */,
+				7834D9C02269E44300A449EC /* Presenter */,
+				7834D9C12269E44900A449EC /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		7834D9BD2269E41500A449EC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		7834D9BE2269E41B00A449EC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7834D9BF2269E42200A449EC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7834D9C02269E44300A449EC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7834D9C12269E44900A449EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		78FC7AAF2267D61000BEEBD5 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				78FC7ADF22687D2B00BEEBD5 /* List */,
+				7834D9BC2269E40900A449EC /* Detail */,
 				78FC7AE022687D3100BEEBD5 /* Search */,
 			);
 			path = Modules;
