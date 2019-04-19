@@ -154,6 +154,41 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7834D9C22269EE3C00A449EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7834D9C32269EE4400A449EC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7834D9C42269EE4900A449EC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7834D9C52269EE4D00A449EC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7834D9C62269EE5200A449EC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		78FC7AAF2267D61000BEEBD5 = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +287,11 @@
 		78FC7AE022687D3100BEEBD5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				7834D9C62269EE5200A449EC /* Protocol */,
+				7834D9C52269EE4D00A449EC /* Router */,
+				7834D9C42269EE4900A449EC /* Interactor */,
+				7834D9C32269EE4400A449EC /* Presenter */,
+				7834D9C22269EE3C00A449EC /* View */,
 			);
 			path = Search;
 			sourceTree = "<group>";

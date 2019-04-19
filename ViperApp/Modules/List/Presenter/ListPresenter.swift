@@ -23,6 +23,10 @@ class ListPresenter: ViewToPresenterProtocol {
     func showDetail(for item: Codable, navigation: UINavigationController) {
         router?.pushDetail(with: item, to: navigation)
     }
+    
+    func showSearch() {
+        router?.presentSearch()
+    }
 }
 
 extension ListPresenter: InteractorToPresenterProtocol {

@@ -30,4 +30,8 @@ class ListRouter: PresenterToRouterProtocol {
     func pushDetail(with item: Codable, to: UINavigationController) {
         
     }
+    
+    func presentSearch() {
+        
+    }
 }
