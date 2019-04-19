@@ -16,4 +16,7 @@ struct Actor: Codable {
     let name: String
     let adult: Bool
 
+    func getImage() -> URL {
+        return URL(string: "https://image.tmdb.org/t/p/w200\(profile_path)")!
+    }
 }

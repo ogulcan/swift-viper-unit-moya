@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AlamofireImage
 
 class ListCell: UITableViewCell {
     
@@ -18,5 +19,6 @@ class ListCell: UITableViewCell {
     func set(for item: Actor) {
         self.nameLabel.text = item.name
         self.popularityLabel.text = "\(item.popularity)"
+        self.profileImageView.af_setImage(withURL: item.getImage())
     }
 }
