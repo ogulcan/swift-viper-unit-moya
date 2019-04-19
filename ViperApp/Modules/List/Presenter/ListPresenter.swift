@@ -20,8 +20,8 @@ class ListPresenter: ViewToPresenterProtocol {
         interactor?.retrieveList()
     }
     
-    func showDetail(for item: Codable) {
-        
+    func showDetail(for item: Codable, navigation: UINavigationController) {
+        router?.pushDetail(with: item, to: navigation)
     }
 }
 

@@ -16,7 +16,7 @@ protocol ViewToPresenterProtocol: class {
     var interactor: PresenterToInteractorProtocol? { get set }
     
     func viewDidLoad()
-    func showDetail(for item: Codable)
+    func showDetail(for item: Codable, navigation: UINavigationController)
 }
 
 protocol PresenterToViewProtocol: class {
@@ -30,7 +30,7 @@ protocol PresenterToViewProtocol: class {
 protocol PresenterToRouterProtocol: class {
     
     static func createListModule() -> UINavigationController
-    func pushDetail(with item: Codable)
+    func pushDetail(with item: Codable, to: UINavigationController)
 }
 
 protocol PresenterToInteractorProtocol: class {

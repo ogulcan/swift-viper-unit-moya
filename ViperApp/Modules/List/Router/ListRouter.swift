@@ -27,7 +27,7 @@ class ListRouter: PresenterToRouterProtocol {
         return navigationController
     }
     
-    func pushDetail(with item: Codable) {
+    func pushDetail(with item: Codable, to: UINavigationController) {
         
     }
 }
