@@ -31,7 +31,8 @@ class ListRouter: PresenterToRouterProtocol {
         
     }
     
-    func presentSearch() {
-        
+    func presentSearch(to: UINavigationController) {
+        let searchModule = SearchRouter.createSearchModule()
+        to.present(searchModule, animated: true, completion: nil)
     }
 }

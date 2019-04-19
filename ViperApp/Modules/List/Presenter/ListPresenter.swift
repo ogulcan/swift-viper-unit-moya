@@ -24,8 +24,8 @@ class ListPresenter: ViewToPresenterProtocol {
         router?.pushDetail(with: item, to: navigation)
     }
     
-    func showSearch() {
-        router?.presentSearch()
+    func showSearch(navigation: UINavigationController) {
+        router?.presentSearch(to: navigation)
     }
 }
 

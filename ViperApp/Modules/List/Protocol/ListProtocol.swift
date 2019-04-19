@@ -17,7 +17,7 @@ protocol ViewToPresenterProtocol: class {
     
     func viewDidLoad()
     func showDetail(for item: Codable, navigation: UINavigationController)
-    func showSearch()
+    func showSearch(navigation: UINavigationController)
 }
 
 protocol PresenterToViewProtocol: class {
@@ -32,7 +32,7 @@ protocol PresenterToRouterProtocol: class {
     
     static func createListModule() -> UINavigationController
     func pushDetail(with item: Codable, to: UINavigationController)
-    func presentSearch()
+    func presentSearch(to: UINavigationController)
 }
 
 protocol PresenterToInteractorProtocol: class {

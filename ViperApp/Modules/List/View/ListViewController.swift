@@ -29,7 +29,7 @@ class ListViewController: UIViewController {
     }
     
     @objc func searchTapped() {
-        self.presenter?.showSearch()
+        self.presenter?.showSearch(navigation: self.navigationController!)
     }
 }
 
