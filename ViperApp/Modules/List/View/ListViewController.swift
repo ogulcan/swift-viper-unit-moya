@@ -55,6 +55,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
         self.presenter?.showDetail(for: self.listItems[indexPath.row], navigation: self.navigationController!)
     }
     
