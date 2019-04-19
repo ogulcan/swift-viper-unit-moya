@@ -30,6 +30,7 @@
 		78FC7B0E22693CA300BEEBD5 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7B0D22693CA300BEEBD5 /* BaseResponse.swift */; };
 		78FC7B102269BB8E00BEEBD5 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7B0F2269BB8E00BEEBD5 /* ListCell.swift */; };
 		78FC7B122269BC1500BEEBD5 /* Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7B112269BC1500BEEBD5 /* Reuse.swift */; };
+		78FC7B142269BC9F00BEEBD5 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7B132269BC9F00BEEBD5 /* UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		78FC7B0D22693CA300BEEBD5 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		78FC7B0F2269BB8E00BEEBD5 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		78FC7B112269BC1500BEEBD5 /* Reuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reuse.swift; sourceTree = "<group>"; };
+		78FC7B132269BC9F00BEEBD5 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		861EB82BF6F486B1C2DF477B /* Pods-ViperAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ViperAppTests/Pods-ViperAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95F29263B7A69753B280CB7E /* Pods_ViperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B884487BD5A1DE5084A0DB /* Pods-ViperAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperAppTests.release.xcconfig"; path = "Target Support Files/Pods-ViperAppTests/Pods-ViperAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,8 +252,9 @@
 		78FC7AEA2268B1C500BEEBD5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				78FC7AEE2268B2A000BEEBD5 /* UIViewController.swift */,
 				78FC7B0022691CF700BEEBD5 /* String.swift */,
+				78FC7B132269BC9F00BEEBD5 /* UITableView.swift */,
+				78FC7AEE2268B2A000BEEBD5 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				78FC7AFC2269149600BEEBD5 /* TMDbApi.swift in Sources */,
 				78FC7AF82269017C00BEEBD5 /* ListInteractor.swift in Sources */,
 				78FC7AEF2268B2A000BEEBD5 /* UIViewController.swift in Sources */,
+				78FC7B142269BC9F00BEEBD5 /* UITableView.swift in Sources */,
 				78FC7B0122691CF700BEEBD5 /* String.swift in Sources */,
 				78FC7B032269241900BEEBD5 /* BaseService.swift in Sources */,
 				78FC7AE322689E2900BEEBD5 /* ListProtocol.swift in Sources */,
