@@ -14,7 +14,16 @@ class SearchViewController: UIViewController {
     var presenter: ViewToPresenterSearchProtocol?
     var listItems: [Actor] = []
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar! {
+        didSet {
+            self.searchBar.delegate = self
+        }
+    }
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            self.tableView.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: ListCell.reuseID)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +57,24 @@ extension SearchViewController: PresenterToViewSearchProtocol {
     }
     
     func showItems(with items: [Codable]) {
+        
+    }
+}
+
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.listItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell.init()
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
     }
 }

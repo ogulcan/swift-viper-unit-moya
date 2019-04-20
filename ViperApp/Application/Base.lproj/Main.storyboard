@@ -112,19 +112,35 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PYt-2b-GBP">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9cw-hj-Vgn" id="cDT-TY-0S6"/>
+                                    <outlet property="delegate" destination="9cw-hj-Vgn" id="TMM-pR-gxo"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="PYt-2b-GBP" firstAttribute="leading" secondItem="Tl2-ko-Qkg" secondAttribute="leading" id="4ht-11-OME"/>
                             <constraint firstItem="Ud5-9C-FeH" firstAttribute="top" secondItem="Tl2-ko-Qkg" secondAttribute="top" id="7aF-2R-S02"/>
+                            <constraint firstItem="PYt-2b-GBP" firstAttribute="trailing" secondItem="Tl2-ko-Qkg" secondAttribute="trailing" id="9XV-Sc-saR"/>
+                            <constraint firstItem="PYt-2b-GBP" firstAttribute="bottom" secondItem="Tl2-ko-Qkg" secondAttribute="bottom" id="L3C-b2-aOh"/>
                             <constraint firstItem="Ud5-9C-FeH" firstAttribute="trailing" secondItem="Tl2-ko-Qkg" secondAttribute="trailing" id="TqO-jz-7aW"/>
+                            <constraint firstItem="PYt-2b-GBP" firstAttribute="top" secondItem="Ud5-9C-FeH" secondAttribute="bottom" id="W0f-0h-TWe"/>
                             <constraint firstItem="Ud5-9C-FeH" firstAttribute="leading" secondItem="Tl2-ko-Qkg" secondAttribute="leading" id="xUS-09-O8q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tl2-ko-Qkg"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Ud5-9C-FeH" id="tv1-ct-vXu"/>
+                        <outlet property="tableView" destination="PYt-2b-GBP" id="ZFf-3W-Bmc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Muo-e0-ge1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="761" y="139"/>
+            <point key="canvasLocation" x="760.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
