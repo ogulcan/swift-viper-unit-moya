@@ -24,7 +24,8 @@ class BaseService<T: TargetType, S: Codable> {
                         _ = try moyaResponse.filterSuccessfulStatusCodes()
                         let baseResponse = try moyaResponse.map(BaseResponse<S>.self)
                         completion(baseResponse.results)
-                    } catch {
+                    } catch let error {
+                        print("Error: \(error.localizedDescription)")
                         completion(nil)
                     }
                     break

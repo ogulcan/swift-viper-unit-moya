@@ -14,9 +14,12 @@ enum TMDbApi {
     case listActors()
     case searchActors(p: String)
     
-    //case listMovies()
-    //case listTrending()
-    //case listGenres()
+    /**
+    case listMovies()
+    case listTrending()
+    case listGenres()
+    ....
+    */
 }
 
 extension TMDbApi: TargetType {
