@@ -12,11 +12,15 @@ struct Actor: Codable {
     
     let id: Int
     let popularity: Float
-    let profile_path: String
+    let profile_path: String?
     let name: String
     let adult: Bool
 
     func getImage() -> URL {
-        return URL(string: "https://image.tmdb.org/t/p/w200\(profile_path)")!
+        if let pp = profile_path {
+            return URL(string: "https://image.tmdb.org/t/p/w200\(pp)")!
+        } else {
+            return URL(string: "https://picsum.photos/100")!
+        }
     }
 }
