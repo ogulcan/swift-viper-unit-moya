@@ -16,17 +16,25 @@ class SearchPresenter: ViewToPresenterSearchProtocol {
     var interactor: PresenterToInteractorSearchProtocol?
     
     func viewDidLoad() {
-        
+        self.view?.showItems(with: [])
+    }
+    
+    func textChanged(to text: String) {
+        if (text.isEmpty) {
+            self.view?.showItems(with: [])
+        } else {
+            self.interactor?.retrieveActor(with: text)
+        }
     }
 }
 
 extension SearchPresenter: InteractorToPresenterSearchProtocol {
     
     func retrieveSuccess(items: [Codable]) {
-        
+        self.view?.showItems(with: items)
     }
     
     func retrieveFail(message: String?) {
-        
+        self.view?.showError(with: message)
     }
 }

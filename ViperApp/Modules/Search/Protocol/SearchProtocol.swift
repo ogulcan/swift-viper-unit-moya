@@ -17,6 +17,7 @@ protocol ViewToPresenterSearchProtocol: class {
     var interactor: PresenterToInteractorSearchProtocol? { get set }
     
     func viewDidLoad()
+    func textChanged(to text: String)
 }
 
 

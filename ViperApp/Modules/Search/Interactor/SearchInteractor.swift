@@ -13,6 +13,13 @@ class SearchInteractor: PresenterToInteractorSearchProtocol {
     var presenter: InteractorToPresenterSearchProtocol?
     
     func retrieveActor(with p: String) {
-        
+        BaseService<TMDbApi, [Actor]>().call(.searchActors(p: p), completion: { actors in
+            guard let actors = actors else {
+                self.presenter?.retrieveFail(message: "")
+                return
+            }
+            
+            self.presenter?.retrieveSuccess(items: actors)
+        })
     }
 }
